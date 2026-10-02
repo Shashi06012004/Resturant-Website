@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0D0B0A;
+    color: #FFFBEB;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #161210;
+}
+::-webkit-scrollbar-thumb {
+  background: #2E241F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F59E0B;
+}
+
+/* Gold gradient text helper */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFFBEB 0%, #FBBF24 50%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer animation for skeletons */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton-shimmer {
+  background: linear-gradient(90deg, #161210 25%, #231C18 50%, #161210 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
