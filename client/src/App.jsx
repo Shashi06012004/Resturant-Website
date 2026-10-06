@@ -4,6 +4,11 @@ import { AuthProvider, useAuth } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { ToastProvider } from './context/ToastContext';
 
+// Navigation Helpers & Route Guards
+import { ScrollToTop } from './components/ScrollToTop';
+import { GuestRoute } from './components/GuestRoute';
+import { ProtectedRoute } from './components/ProtectedRoute';
+
 // Layouts
 import { CustomerLayout } from './layouts/CustomerLayout';
 import { AdminLayout } from './layouts/AdminLayout';
@@ -53,6 +58,7 @@ export const App = () => {
       <AuthProvider>
         <CartProvider>
           <Router>
+            <ScrollToTop />
             <Routes>
               {/* Customer Layout Routes */}
               <Route path="/" element={<CustomerLayout />}>
@@ -61,11 +67,20 @@ export const App = () => {
                 <Route path="menu/:categorySlug" element={<CategoryPage />} />
                 <Route path="product/:productSlug" element={<ProductDetails />} />
                 <Route path="cart" element={<Cart />} />
-                <Route path="checkout" element={<Checkout />} />
+                
+                {/* Guest-only routes (redirects if already logged in) */}
+                <Route element={<GuestRoute />}>
+                  <Route path="login" element={<Login />} />
+                  <Route path="register" element={<Register />} />
+                </Route>
+
+                {/* Customer protected routes */}
+                <Route element={<ProtectedRoute />}>
+                  <Route path="checkout" element={<Checkout />} />
+                  <Route path="profile" element={<Profile />} />
+                </Route>
+
                 <Route path="order-confirmation/:orderId" element={<OrderConfirmation />} />
-                <Route path="login" element={<Login />} />
-                <Route path="register" element={<Register />} />
-                <Route path="profile" element={<Profile />} />
                 <Route path="about" element={<About />} />
                 <Route path="contact" element={<Contact />} />
               </Route>
@@ -102,3 +117,4 @@ export const App = () => {
 };
 
 export default App;
+

@@ -42,7 +42,7 @@ export const Contact = () => {
                 <MapPin className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-brand-gold">Location Address</strong>
-                  <span className="text-brand-muted">45 Gourmet Avenue, Chocolate District, Hyderabad, India</span>
+                  <span className="text-brand-muted">Nadhi Agraharam, road Old Houseing board colony, Near K.P.N. Hospital , Jogulamba Gadwal. District Telangana. state. 509125.</span>
                 </div>
               </div>
 
@@ -50,7 +50,7 @@ export const Contact = () => {
                 <Phone className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-brand-gold">Phone Number</strong>
-                  <span className="text-brand-muted">+91 98765 43210</span>
+                  <span className="text-brand-muted">+91 6281821967</span>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ export const Contact = () => {
                 <Mail className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-brand-gold">Email Support</strong>
-                  <span className="text-brand-muted">contact@draksha.com</span>
+                  <span className="text-brand-muted">bhuvaneshwarimr18@gmail.com</span>
                 </div>
               </div>
 
@@ -66,19 +66,33 @@ export const Contact = () => {
                 <Clock className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <div>
                   <strong className="block text-brand-gold">Operating Hours</strong>
-                  <span className="text-brand-goldLight">11:00 AM – 11:30 PM (Everyday)</span>
+                  <span className="text-brand-goldLight">11:00 AM – 9:30 PM (Everyday)</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Interactive Location Placeholder Map */}
-          <div className="bg-brand-card border border-brand-border/80 p-6 rounded-3xl text-center space-y-3">
-            <MapPin className="w-8 h-8 text-brand-gold mx-auto" />
-            <h3 className="font-serif text-lg font-bold text-brand-ivory">Visit Us In Person</h3>
+          {/* Interactive Location Map */}
+          <div className="bg-brand-card border border-brand-border/80 p-6 rounded-3xl text-center space-y-4 overflow-hidden">
+            <div className="flex items-center justify-center space-x-2">
+              <MapPin className="w-6 h-6 text-brand-gold" />
+              <h3 className="font-serif text-lg font-bold text-brand-ivory">Visit Us In Person</h3>
+            </div>
             <p className="text-xs text-brand-muted">
               Located conveniently in the heart of the food & dessert corridor.
             </p>
+            <div className="max-w-sm mx-auto w-full h-36 sm:h-40 rounded-2xl overflow-hidden border border-brand-border/60 shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.6607559717204!2d78.53394667493805!3d17.52370038338688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b006d955835%3A0x17c0fe3e30b05fac!2sNikhil!5e0!3m2!1sen!2sin!4v1791049310625!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="strict-origin-when-cross-origin"
+                title="Restaurant Location Map"
+              />
+            </div>
           </div>
         </div>
 

@@ -6,8 +6,8 @@ import { useToast } from '../context/ToastContext';
 import api from '../services/api';
 
 export const AdminLogin = () => {
-  const [email, setEmail] = useState('admin@draksha.com');
-  const [password, setPassword] = useState('admin123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
 
   const { login } = useAuth();
@@ -43,12 +43,7 @@ export const AdminLogin = () => {
           <p className="text-xs text-brand-muted">Authenticate to manage Draksha menu & orders</p>
         </div>
 
-        <div className="p-3 bg-brand-gold/10 border border-brand-gold/30 rounded-xl text-[11px] text-brand-goldLight space-y-1">
-          <p><strong>Demo Seed Credentials:</strong></p>
-          <p>Email: <code className="text-brand-ivory">admin@draksha.com</code></p>
-          <p>Password: <code className="text-brand-ivory">admin123</code></p>
-        </div>
-
+        
         <form onSubmit={handleAdminSubmit} className="space-y-4 text-xs">
           <div>
             <label className="block text-brand-muted mb-1 font-medium">Admin Email</label>
@@ -56,6 +51,7 @@ export const AdminLogin = () => {
               <input
                 type="email"
                 required
+                placeholder='sample@gmail.com'
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full bg-brand-dark border border-brand-border focus:border-brand-gold text-brand-ivory rounded-xl p-3 pl-10 outline-none"
@@ -69,6 +65,7 @@ export const AdminLogin = () => {
             <div className="relative">
               <input
                 type="password"
+                placeholder='*******'
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}

@@ -147,9 +147,10 @@ export const Checkout = () => {
               </div>
             </div>
           </div>
+          </div>
 
           {/* Payment Method Selection */}
-          <div className="bg-brand-card border border-brand-border/80 p-6 rounded-3xl space-y-4">
+         {/* <div className="bg-brand-card border border-brand-border/80 p-6 rounded-3xl space-y-4">
             <h2 className="font-serif text-xl font-bold text-brand-ivory flex items-center space-x-2">
               <CreditCard className="w-5 h-5 text-brand-gold" />
               <span>Select Payment Option</span>
@@ -187,7 +188,7 @@ export const Checkout = () => {
               </label>
             </div>
           </div>
-        </div>
+        </div>   */}
 
         {/* Order Summary & Submit Button */}
         <div className="bg-brand-card border border-brand-border/80 p-6 rounded-3xl space-y-6 h-fit backdrop-blur-md">

@@ -31,7 +31,7 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static uploads
+// Centralized error handler
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // Routes
@@ -47,6 +47,23 @@ app.use('/api/admin', statsRoutes);
 // Health check endpoint
 app.get('/api/health', (_req, res) => {
   res.json({ success: true, message: 'Draksha API Server is running smoothly' });
+});
+
+// Serve frontend static build assets
+const clientDistPath = path.join(__dirname, '../../client/dist');
+app.use(express.static(clientDistPath));
+
+// React SPA fallback routing for direct path navigation like /login, /register, etc.
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api') || req.path.startsWith('/uploads')) {
+    return next();
+  }
+  const indexPath = path.join(clientDistPath, 'index.html');
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      return next();
+    }
+  });
 });
 
 // Centralized error handler
