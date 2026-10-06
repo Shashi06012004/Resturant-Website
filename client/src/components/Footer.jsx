@@ -77,7 +77,7 @@ export const Footer = () => {
               Contact & Hours
             </h4>
             <ul className="space-y-3 text-xs">
-              <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.6607559717204!2d78.53394667493805!3d17.52370038338688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9b006d955835%3A0x17c0fe3e30b05fac!2sNikhil!5e0!3m2!1sen!2sin!4v1791049310625!5m2!1sen!2sin" target='_main'><li className="flex items-start space-x-3">
+              <a href="https://maps.app.goo.gl/LcsrsNJuQUh5AEx6A?g_st=aw" target='_main'><li className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
                 <span>Nadhi Agraharam, road Old Houseing board colony, Near K.P.N. Hospital ,
 Jogulamba Gadwal. District Telangana. state. 509125.</span>
