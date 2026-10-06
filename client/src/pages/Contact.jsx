@@ -83,7 +83,7 @@ export const Contact = () => {
             </p>
             <div className="max-w-sm mx-auto w-full h-36 sm:h-40 rounded-2xl overflow-hidden border border-brand-border/60 shadow-lg">
               <iframe
-                src="https://maps.app.goo.gl/LcsrsNJuQUh5AEx6A?g_st=aw"
+                src="https://maps.app.goo.gl/ErfE3r6ZNnTbMaS6A"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
